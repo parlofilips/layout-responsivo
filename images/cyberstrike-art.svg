@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo do Disco -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0f172a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#07090e" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Gradiente Neon do Controle -->
+    <linearGradient id="controllerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Gradiente do Raio Elétrico -->
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+
+    <!-- Brilho Neon (Glow Filter) -->
+    <filter id="neonCyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="neonBlueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fundo Circular Cibernético -->
+  <circle cx="250" cy="250" r="230" fill="url(#bgGlow)" stroke="#23304c" stroke-width="4"/>
+  <circle cx="250" cy="250" r="200" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="10 8" opacity="0.6"/>
+  <circle cx="250" cy="250" r="160" fill="rgba(56, 189, 248, 0.05)" stroke="#334155" stroke-width="2"/>
+
+  <!-- Marcadores Radiais Decorativos -->
+  <circle cx="250" cy="40" r="6" fill="#38bdf8" filter="url(#neonCyanGlow)"/>
+  <circle cx="250" cy="460" r="6" fill="#38bdf8" filter="url(#neonCyanGlow)"/>
+  <circle cx="40" cy="250" r="6" fill="#38bdf8" filter="url(#neonCyanGlow)"/>
+  <circle cx="460" cy="250" r="6" fill="#38bdf8" filter="url(#neonCyanGlow)"/>
+
+  <!-- Aura do Controle -->
+  <ellipse cx="250" cy="280" rx="140" ry="80" fill="rgba(37, 99, 235, 0.25)" filter="url(#neonBlueGlow)"/>
+
+  <!-- Base do Controle Gamer -->
+  <path d="M150 250 
+           C120 250, 100 290, 130 350 
+           C150 390, 190 350, 220 320 
+           L280 320 
+           C310 350, 350 390, 370 350 
+           C400 290, 380 250, 350 250 
+           Z" 
+        fill="url(#controllerGrad)" 
+        stroke="#38bdf8" 
+        stroke-width="5" 
+        filter="url(#neonCyanGlow)"/>
+
+  <!-- Pegada Texturizada do Controle -->
+  <path d="M125 320 C118 335, 125 350, 135 355" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M375 320 C382 335, 375 350, 365 355" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- Grip / Analógicos -->
+  <circle cx="185" cy="295" r="22" fill="#0f172a" stroke="#475569" stroke-width="3"/>
+  <circle cx="185" cy="295" r="14" fill="#1e293b"/>
+  <circle cx="185" cy="295" r="5" fill="#38bdf8"/>
+
+  <circle cx="315" cy="295" r="22" fill="#0f172a" stroke="#475569" stroke-width="3"/>
+  <circle cx="315" cy="295" r="14" fill="#1e293b"/>
+  <circle cx="315" cy="295" r="5" fill="#38bdf8"/>
+
+  <!-- D-Pad (Direcional em Cruz à Esquerda) -->
+  <rect x="160" y="220" width="16" height="42" rx="3" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="147" y="233" width="42" height="16" rx="3" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="168" cy="241" r="3" fill="#38bdf8"/>
+
+  <!-- Botões de Ação ABXY à Direita -->
+  <circle cx="332" cy="225" r="7" fill="#ef4444"/> <!-- Y / Vermelho -->
+  <circle cx="315" cy="242" r="7" fill="#3b82f6"/> <!-- X / Azul -->
+  <circle cx="349" cy="242" r="7" fill="#eab308"/> <!-- B / Amarelo -->
+  <circle cx="332" cy="259" r="7" fill="#10b981"/> <!-- A / Verde -->
+
+  <!-- Barra Central e Botões Menu/Select -->
+  <rect x="235" y="248" width="30" height="8" rx="4" fill="#0f172a"/>
+  <circle cx="225" cy="252" r="4" fill="#64748b"/>
+  <circle cx="275" cy="252" r="4" fill="#64748b"/>
+
+  <!-- Faísca de Energia / Relâmpago Superior -->
+  <polygon points="250,90 265,145 240,150 258,195 220,165 242,160" 
+           fill="url(#boltGrad)" 
+           stroke="#fef08a" 
+           stroke-width="2" 
+           filter="url(#neonCyanGlow)"/>
+
+  <!-- Faixa Tecnológica de Rodapé -->
+  <text x="250" y="420" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" letter-spacing="6" fill="#94a3b8" text-anchor="middle">
+    CYBERSTRIKE • ARENA
+  </text>
+</svg>
